@@ -1,5 +1,5 @@
 import React, { use, useState } from "react";
-import { data } from "react-router";
+import { data, Link } from "react-router";
 
 const Users = ({ userPromise }) => {
   // 5.4 get the data
@@ -76,6 +76,8 @@ const Users = ({ userPromise }) => {
         {users.map((user) => (
           <p key={user._id}>
             {user.name} : {user.email}
+            {/* 7.2 created the details link in ui */}
+            <Link to={`/users/${user._id}`}>Details</Link>
             <button onClick={() => handleUserDelete(user._id)}>X</button>
             {/*6.0 My requirement is delete an user upon delete*/}
           </p>
