@@ -24,6 +24,11 @@ const UpdateUser = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log("After update", data); //now go to edit a user and update a data u will see the updated data in the server terminal
+
+        // 8.11 in console from the upper data  we found some object where we use modifiedCount
+        if (data.modifiedCount) {
+          console.log("After update in data.data.modifiedCount", data); //in ui the updated data will be show after reload
+        }
       });
   };
   return (
