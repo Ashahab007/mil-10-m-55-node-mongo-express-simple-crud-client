@@ -78,6 +78,8 @@ const Users = ({ userPromise }) => {
             {user.name} : {user.email}
             {/* 7.2 created the details link in ui */}
             <Link to={`/users/${user._id}`}>Details</Link>
+            {/* 8.0  my requirement is update the user information using put method. First created an edit button and update the user data using dynamic id*/}
+            <Link to={`/update/${user._id}`}>Edit</Link>
             <button onClick={() => handleUserDelete(user._id)}>X</button>
             {/*6.0 My requirement is delete an user upon delete*/}
           </p>

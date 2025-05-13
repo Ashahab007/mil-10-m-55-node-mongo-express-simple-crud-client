@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Root from "./components/layouts/Root.jsx";
 import UserDetails from "./components/UserDetails.jsx";
+import UpdateUser from "./components/UpdateUser.jsx";
 
 // 7.0 My requirement is show the user details in another route i.e load a specific user. so setup the router first.
 
@@ -20,6 +21,13 @@ const router = createBrowserRouter([
         Component: UserDetails,
         loader: ({ params }) =>
           fetch(`http://localhost:3000/users/${params.id}`),
+      },
+      // 8.2 creating the another route for update user
+      {
+        path: "/update/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/users/${params.id}`),
+        Component: UpdateUser,
       },
     ],
   },

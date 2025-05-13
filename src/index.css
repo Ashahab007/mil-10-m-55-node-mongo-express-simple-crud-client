@@ -78,3 +78,7 @@ form [type="submit"] {
   /* border: coral; */
   background-color: antiquewhite;
 }
+
+a {
+  padding-left: 5px;
+}
