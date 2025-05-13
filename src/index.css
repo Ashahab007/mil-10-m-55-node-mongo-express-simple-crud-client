@@ -66,3 +66,15 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+form input {
+  height: 25px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+form [type="submit"] {
+  padding: 5px;
+  /* border: coral; */
+  background-color: antiquewhite;
+}
